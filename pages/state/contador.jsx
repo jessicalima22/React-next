@@ -6,11 +6,11 @@ export default function contador(){
     let setAdd = arrayAumentar[1]    
     
 
-    function aumentar(){
+    const aumentar = () => {
         setAdd(add+1) 
     }
 
-    function subtrair(){
+    const subtrair = () => {
         setAdd(add-1) 
     }
 
