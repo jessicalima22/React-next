@@ -1,7 +1,16 @@
- export function generateNumber (){
-    let numbers = []
-
-    for (let i=0; i<7; i++) {
-        numbers.push= Math.floor(Math.random()*61)}
-        
+  export function generateNumber (qtty = 6, numbers = []){
+    if (qtty < 6 && qtty > 60){
+        throw "invalid quantity"
     }
+
+    if (numbers.length === qtty){
+        return numbers
+    }
+
+    if ()
+
+
+
+    }
+
+    
