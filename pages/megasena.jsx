@@ -8,10 +8,14 @@ import { useState } from "react"
 export default function megasena (){
 
 
-       const [numbers, setNumbers] = useState(generateNumber())
+       const [numbers, setNumbers] = useState()
 
        function renderNumbers(){
-        return numbers.map(number=> <MegasenaBall key = {number} number = {number}/>)
+        return numbers?.map(number=> <MegasenaBall key = {number} number = {number}/>)
+       }
+
+       function handClick(){
+        setNumbers(generateNumber())
        }
 
     return(
@@ -21,7 +25,7 @@ export default function megasena (){
             <div className={style.MegasenaBall}>
            {renderNumbers()}
             </div>
-        <button onClick={generateNumber}>Click here to generate</button>
+        <button onClick={handClick}>Click here to generate</button>
         </div>
         </>
     )
